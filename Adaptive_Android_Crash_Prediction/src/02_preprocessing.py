@@ -1,6 +1,6 @@
 import pandas as pd
 import os
-import joblib
+import pickle
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -42,7 +42,8 @@ pd.DataFrame(X_test_scaled, columns=X.columns).to_csv(
 y_train.to_csv("dataset/processed/y_train.csv", index=False)
 y_test.to_csv("dataset/processed/y_test.csv", index=False)
 
-joblib.dump(scaler, "models/scaler.pkl")
+with open("models/scaler.pkl", "wb") as file:
+    pickle.dump(scaler, file)
 
 print("Preprocessing completed successfully!")
 print("Training records:", X_train.shape[0])
