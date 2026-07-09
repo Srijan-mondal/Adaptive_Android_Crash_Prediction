@@ -71,6 +71,7 @@ print(cv_scores)
 print("Average CV Accuracy:", round(cv_scores.mean() * 100, 2), "%")
 
 os.makedirs("models", exist_ok=True)
-joblib.dump(hybrid_model, "models/hybrid_model.pkl")
+with open("models/hybrid_model.pkl", "wb") as file:
+    pickle.dump(hybrid_model, file)
 
 print("\nModel saved successfully!")
