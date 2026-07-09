@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import pickle
+import joblib
 import os
 import sys
 
@@ -13,6 +13,9 @@ sys.path.insert(0, SRC_PATH)
 from self_healing_engine import self_healing_recommendation
 from risk_index import calculate_acri, calculate_dhi, get_risk_level
 from root_cause_ranking import root_cause_ranking
+
+model = joblib.load(os.path.join(PROJECT_ROOT, "models", "hybrid_model.pkl"))
+scaler = joblib.load(os.path.join(PROJECT_ROOT, "models", "scaler.pkl"))
 
 # Load model and scaler
 model = joblib.load("models/hybrid_model.pkl")
