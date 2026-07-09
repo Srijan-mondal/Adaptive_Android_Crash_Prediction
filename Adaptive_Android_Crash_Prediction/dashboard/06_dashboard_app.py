@@ -1,10 +1,14 @@
 import streamlit as st
 import pandas as pd
 import pickle
-import sys
 import os
+import sys
 
-sys.path.append(os.path.abspath("src"))
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(CURRENT_DIR)
+SRC_PATH = os.path.join(PROJECT_ROOT, "src")
+
+sys.path.insert(0, SRC_PATH)
 
 from self_healing_engine import self_healing_recommendation
 from risk_index import calculate_acri, calculate_dhi, get_risk_level
