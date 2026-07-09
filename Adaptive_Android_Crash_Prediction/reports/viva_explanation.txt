@@ -1,0 +1,76 @@
+# Adaptive Android Crash Prediction and Autonomous Self-Healing Framework
+
+## Project Objective
+
+This project predicts Android application crash risk using runtime telemetry features such as CPU usage, RAM usage, battery level, FPS, storage usage, network latency, active threads, app launch time, and device temperature.
+
+The system also recommends autonomous self-healing actions to reduce crash risk.
+
+## Dataset
+
+The dataset contains 15,000 records and 10 input features.
+
+### Features
+
+1. CPU_Usage
+2. RAM_Usage
+3. Battery_Level
+4. Battery_Temperature
+5. FPS
+6. Storage_Usage
+7. Network_Latency
+8. Active_Threads
+9. App_Launch_Time
+10. Device_Temperature
+
+Target column:
+
+```text
+Crash
+0 = No Crash
+1 = Crash
+
+
+---
+
+## `reports/viva_explanation.txt`
+
+```text
+Project Title:
+Adaptive Android Crash Prediction and Autonomous Self-Healing Framework Using Hybrid Machine Learning
+
+Problem Statement:
+Android applications may crash due to high CPU usage, memory pressure, overheating, low FPS, high storage usage, high network latency, excessive active threads, and slow launch time. Traditional systems mainly detect crashes after failure. This project predicts crash risk before failure and recommends preventive self-healing actions.
+
+Dataset:
+The dataset contains 15,000 records with 10 runtime telemetry features and one target column named Crash.
+
+Features:
+CPU Usage, RAM Usage, Battery Level, Battery Temperature, FPS, Storage Usage, Network Latency, Active Threads, App Launch Time, and Device Temperature.
+
+Model:
+The project uses a hybrid machine learning model based on Logistic Regression, Random Forest, and Gradient Boosting. These models are combined using a soft voting ensemble.
+
+Why Hybrid Model:
+Logistic Regression gives simple linear learning, Random Forest handles nonlinear feature relationships, and Gradient Boosting improves weak learners. Combining them improves stability and generalization.
+
+Novelty:
+The main novelty is not only crash prediction, but also adaptive risk analysis and self-healing recommendation.
+
+Novel components:
+1. Adaptive Crash Risk Index, ACRI
+2. Device Health Index, DHI
+3. Root Cause Ranking
+4. Crash Probability Estimation
+5. Self-Healing Recommendation Engine
+6. Batch Prediction System
+7. Learning Curve Based Overfitting Analysis
+
+Overfitting Prevention:
+The project avoids overfitting using train-test split, stratified sampling, class balancing, limited tree depth, minimum sample leaf, 5-fold cross-validation, and learning curve analysis.
+
+Expected Accuracy:
+The model is expected to achieve around 94% to 97% accuracy depending on dataset distribution. More important than accuracy is balanced precision, recall, F1-score, and cross-validation performance.
+
+Conclusion:
+This framework provides proactive Android crash risk prediction and recommends suitable preventive actions. It can be implemented using Python and Streamlit without Android Studio.

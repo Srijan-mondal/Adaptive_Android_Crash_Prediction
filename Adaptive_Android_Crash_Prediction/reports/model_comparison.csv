@@ -1,0 +1,5 @@
+Model,Accuracy,Precision,Recall,F1_Score,ROC_AUC
+Logistic Regression,96.87,95.93,97.08,96.5,0.9806
+Random Forest,95.7,95.62,94.69,95.15,0.9774
+Gradient Boosting,95.97,96.06,94.84,95.44,0.9791
+Hybrid Voting Ensemble,96.1,96.14,95.06,95.6,0.9793

@@ -1,0 +1,37 @@
+
+Adaptive Android Crash Prediction and Autonomous Self-Healing Framework
+
+Project Summary:
+This project predicts Android application crash risk using runtime telemetry features.
+The system uses CPU usage, RAM usage, battery level, battery temperature, FPS,
+storage usage, network latency, active threads, app launch time, and device temperature.
+
+Model:
+Hybrid Machine Learning Model using Logistic Regression, Random Forest,
+and Gradient Boosting with Soft Voting Ensemble.
+
+Performance Metrics:
+Accuracy  : 96.10%
+Precision : 96.14%
+Recall    : 95.06%
+F1-Score  : 95.60%
+ROC-AUC   : 0.9793
+
+Novelty:
+1. Runtime telemetry-based Android crash prediction.
+2. Adaptive crash probability estimation.
+3. Device health-aware risk analysis.
+4. Autonomous self-healing recommendation engine.
+5. Explainable feature importance-based crash cause identification.
+
+Self-Healing Examples:
+- High CPU usage: reduce background processes.
+- High RAM usage: memory optimization.
+- Low FPS: graphics optimization.
+- High temperature: thermal protection.
+- High storage usage: cache cleanup.
+
+Conclusion:
+The proposed framework predicts crash risk before failure and recommends
+preventive self-healing actions, making it useful for proactive Android
+application reliability improvement.
